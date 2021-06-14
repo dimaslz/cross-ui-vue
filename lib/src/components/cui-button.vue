@@ -1,11 +1,3 @@
-<script>
-import Vue from 'vue';
-
-export default Vue.extend({
-  name: 'CuiButton',
-});
-</script>
-
 <template>
 	<div>
 		<cross-button
@@ -24,7 +16,7 @@ export default Vue.extend({
 import Vue from "vue";
 
 export default Vue.extend({
-  name: "CrossUIButton",
+  name: "CuiButton",
   props: {
     pill: {
       type: Boolean,
