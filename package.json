@@ -1,6 +1,6 @@
 {
   "name": "@cross-ui/vue",
-  "version": "0.0.1",
+  "version": "0.0.1-alpha.0",
   "description": "Wrapper of @cross-ui/core for Vue projects",
   "main": "index.js",
   "directories": {
@@ -9,12 +9,16 @@
   "scripts": {
     "build:lib": "yarn --cwd lib build",
     "build:playground": "yarn --cwd playground build",
-    "prebuild": "yarn --cwd lib install && yarn --cwd playground install",
+    "install:lib": "yarn --cwd lib install",
+    "install:playground": "yarn --cwd playground install",
+    "prebuild": "yarn install:lib && yarn install:playground",
     "build": "yarn build:lib && yarn build:playground",
-    "release": "release-it",
-    "publish": "npm publish --access public ./lib/dist"
+    "release": "release-it"
   },
-  "repository": "git+https://github.com/dimaslz/cross-ui-vue.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dimaslz/cross-ui-vue.git"
+  },
   "keywords": [
     "vue",
     "cross-ui",
