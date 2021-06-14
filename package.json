@@ -1,0 +1,43 @@
+{
+  "name": "@cross-ui/vue",
+  "version": "0.0.1",
+  "description": "Wrapper of @cross-ui/core for Vue projects",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "build:lib": "yarn --cwd lib build",
+    "build:playground": "yarn --cwd playground build",
+    "prebuild": "yarn --cwd lib install && yarn --cwd playground install",
+    "build": "yarn build:lib && yarn build:playground",
+    "release": "release-it",
+    "publish": "npm publish --access public ./lib/dist"
+  },
+  "repository": "git+https://github.com/dimaslz/cross-ui-vue.git",
+  "keywords": [
+    "vue",
+    "cross-ui",
+    "web",
+    "components",
+    "design",
+    "system"
+  ],
+  "author": "dimaslz <me@dimaslz.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dimaslz/cross-ui-vue/issues"
+  },
+  "homepage": "https://github.com/dimaslz/cross-ui-vue#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "@release-it/bumper": "^2.0.0",
+    "husky": "^6.0.0",
+    "release-it": "^14.9.0"
+  },
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  }
+}
