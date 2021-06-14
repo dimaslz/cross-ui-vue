@@ -1,13 +1,14 @@
 {
   "name": "@cross-ui/vue",
-  "version": "0.0.1-alpha.3",
+  "version": "0.0.1-alpha.4",
   "description": "Wrapper of @cross-ui/core for Vue projects",
   "main": "index.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "build:lib": "yarn --cwd lib build",
+    "copy-setup": "cp lib/setup.js lib/dist",
+    "build:lib": "yarn --cwd lib build && yarn copy-setup",
     "build:playground": "yarn --cwd playground build",
     "install:lib": "yarn --cwd lib install",
     "install:playground": "yarn --cwd playground install",
