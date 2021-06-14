@@ -1,15 +1,13 @@
 <template>
-	<div>
-		<cross-button
-      :color="color"
-      :circle="circle"
-      :square="square"
-      :pill="pill"
-      :outline="outline"
-    >
-      <slot />
-    </cross-button>
-	</div>
+  <cross-button
+    :color="color"
+    :circle="circle"
+    :square="square"
+    :pill="pill"
+    :outline="outline"
+  >
+    <slot />
+  </cross-button>
 </template>
 
 <script>
